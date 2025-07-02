@@ -29,7 +29,12 @@ TEST_F(PrimeFactorsFixture, Of4) {
 	EXPECT_EQ(expected, prime_factor.of(4));
 }
 
-TEST_F(PrimeFactorsFixture, Of5) {
+TEST_F(PrimeFactorsFixture, Of6) {
 	std::vector<int> expected = {2, 3};
 	EXPECT_EQ(expected, prime_factor.of(6));
+}
+
+TEST_F(PrimeFactorsFixture, Of9) {
+	std::vector<int> expected = {3, 3};
+	EXPECT_EQ(expected, prime_factor.of(9));
 }
