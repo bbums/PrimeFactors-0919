@@ -5,19 +5,21 @@ public:
 	std::vector<int> of(int number) {
 		std::vector<int> res = {};
 		if (number >= 2) {
-			tryDevideBy(2, number, res);
-			tryDevideBy(3, number, res);
-			if(number != 1)
+			for (int devisor = 2; devisor <= 3 && number != 1; devisor++) {
+				tryDevideBy(devisor, number, res);
+			}
+
+			if (number != 1)
 				res.push_back(number);
 		}
 
 		return res;
 	}
-	void tryDevideBy(int devider, int& number, std::vector<int>& res)
+	void tryDevideBy(int devisor, int& number, std::vector<int>& res)
 	{
-		while (number % devider == 0) {
-			res.push_back(devider);
-			number /= devider;
+		while (number % devisor == 0) {
+			res.push_back(devisor);
+			number /= devisor;
 		}
 	}
 private:
