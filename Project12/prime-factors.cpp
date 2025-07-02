@@ -3,7 +3,8 @@
 class PrimeFactors {
 public:
 	std::vector<int> of(int v) {
-		return {};
+		std::vector<int> res;
+		return res;
 	}
 private:
 
