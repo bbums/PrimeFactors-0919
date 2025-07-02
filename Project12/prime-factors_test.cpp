@@ -38,3 +38,8 @@ TEST_F(PrimeFactorsFixture, Of9) {
 	std::vector<int> expected = {3, 3};
 	EXPECT_EQ(expected, prime_factor.of(9));
 }
+
+TEST_F(PrimeFactorsFixture, Of12) {
+	std::vector<int> expected = {2, 2, 3};
+	EXPECT_EQ(expected, prime_factor.of(12));
+}
