@@ -23,3 +23,8 @@ TEST_F(PrimeFactorsFixture, Of3) {
 	std::vector<int> expected = {3};
 	EXPECT_EQ(expected, prime_factor.of(3));
 }
+
+TEST_F(PrimeFactorsFixture, Of4) {
+	std::vector<int> expected = {2, 2};
+	EXPECT_EQ(expected, prime_factor.of(4));
+}
