@@ -9,9 +9,14 @@ public:
 				res.push_back(2);
 				number /= 2;
 			}
+			while (number % 3 == 0) {
+				res.push_back(3);
+				number /= 3;
+			}
 			if(number != 1)
 				res.push_back(number);
 		}
+
 		return res;
 	}
 private:
